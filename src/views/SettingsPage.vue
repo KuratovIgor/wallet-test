@@ -1,6 +1,6 @@
 <template>
   <h1 class="mb-10">Выберите валютную пару</h1>
-  <v-select v-model="currencyPair" label="Select" :items="CURRENCY_PAIRS">
+  <v-select v-model="currencyPair" label="Валютная пара" :items="CURRENCY_PAIRS">
     <template #item="{ props }">
       <v-list-item v-bind="props" @click="handleCurrencyPairChoose" />
     </template>
