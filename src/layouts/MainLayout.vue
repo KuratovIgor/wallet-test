@@ -2,7 +2,7 @@
   <v-app>
     <v-app-bar :elevation="17">
       <template #prepend>
-        <v-icon icon="mdi-bank" />
+        <v-icon icon="$vuetify-outline" />
       </template>
 
       <v-app-bar-title>Wallet</v-app-bar-title>
@@ -25,7 +25,7 @@
       <v-tabs-window v-model="tab">
         <v-tabs-window-item v-for="(tab, index) in MENU_TABS" :key="index" :value="tab.value">
           <v-container>
-            <RouterView />
+            <router-view />
           </v-container>
         </v-tabs-window-item>
       </v-tabs-window>
