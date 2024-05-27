@@ -5,7 +5,7 @@
         <v-icon icon="mdi-bank" />
       </template>
 
-      <v-app-bar-title>Кошелек</v-app-bar-title>
+      <v-app-bar-title>Wallet</v-app-bar-title>
 
       <template v-slot:append>
         <v-tabs v-model="tab">
@@ -24,7 +24,9 @@
     <v-main>
       <v-tabs-window v-model="tab">
         <v-tabs-window-item v-for="(tab, index) in MENU_TABS" :key="index" :value="tab.value">
-          <RouterView />
+          <v-container>
+            <RouterView />
+          </v-container>
         </v-tabs-window-item>
       </v-tabs-window>
     </v-main>

@@ -18,4 +18,13 @@ export default defineConfig({
       }
     }
   }
+  // server: {
+  //   proxy: {
+  //     '/sas': {
+  //       target: 'wss://stream.binance.com:9443/ws/bnbbtc@depth',
+  //       changeOrigin: true,
+  //       secure: false
+  //     }
+  //   }
+  // }
 })
