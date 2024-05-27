@@ -25,10 +25,10 @@
               </div>
             </template>
           </v-list-item>
+
+          <v-divider inset></v-divider>
         </template>
       </v-virtual-scroll>
-
-      <v-divider inset></v-divider>
     </v-list>
   </v-card>
 </template>
