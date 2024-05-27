@@ -10,21 +10,5 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: '@use "@/assets/styles/resources" as *;'
-      }
-    }
   }
-  // server: {
-  //   proxy: {
-  //     '/sas': {
-  //       target: 'wss://stream.binance.com:9443/ws/bnbbtc@depth',
-  //       changeOrigin: true,
-  //       secure: false
-  //     }
-  //   }
-  // }
 })
