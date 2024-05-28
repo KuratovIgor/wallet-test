@@ -20,16 +20,22 @@ const router = createRouter({
         {
           path: '/settings',
           name: ROUTE_NAMES.settings,
-          component: () => import('@/views/SettingsPage.vue')
+          component: () => import('@/views/SettingsPage.vue'),
+          meta: { name: 'Settings' }
         },
         {
           path: '/order-book',
           name: ROUTE_NAMES.orderBook,
-          component: () => import('@/views/OrderBookPage.vue')
+          component: () => import('@/views/OrderBookPage.vue'),
+          meta: { name: 'Order Book' }
         }
       ]
     }
   ]
+})
+
+router.beforeEach((to) => {
+  document.title = to.meta.name as string
 })
 
 export default router
