@@ -1,7 +1,7 @@
 <template>
   <v-card>
     <v-toolbar color="secondary">
-      <v-toolbar-title>Лог изменений валютной пары</v-toolbar-title>
+      <v-toolbar-title>Currency pair changelog</v-toolbar-title>
     </v-toolbar>
 
     <v-list lines="two">
@@ -34,7 +34,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useChangelogStore } from '@/stores/changelog'
+import { useChangelogStore } from '@/stores/changelog.store'
 
 const { changelog } = useChangelogStore()
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <h1 class="mb-10">Выберите валютную пару</h1>
+  <h1 class="mb-10">Choose currency pair</h1>
   <v-select v-model="activeCurrencyPair" label="Валютная пара" :items="CURRENCY_PAIRS">
     <template #item="{ props }">
       <v-list-item v-bind="props" @click="handleCurrencyPairChoose" />
@@ -11,13 +11,13 @@
 
 <script lang="ts" setup>
 import PairsChangeLog from '@/components/PairsChangeLog.vue'
-import { useWalletStore } from '@/stores/wallet'
-import { useChangelogStore } from '@/stores/changelog'
+import { useDepthStore } from '@/stores/depth.store'
+import { useChangelogStore } from '@/stores/changelog.store'
 import { DateUtil } from '@/utils/date'
 import { storeToRefs } from 'pinia'
 
-const { CURRENCY_PAIRS } = useWalletStore()
-const { activeCurrencyPair } = storeToRefs(useWalletStore())
+const { activeCurrencyPair } = storeToRefs(useDepthStore())
+const { CURRENCY_PAIRS } = useDepthStore()
 const { saveLog } = useChangelogStore()
 
 let currencyPairBuffer = CURRENCY_PAIRS[0]

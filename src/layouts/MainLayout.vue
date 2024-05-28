@@ -5,7 +5,7 @@
         <v-icon icon="$vuetify-outline" />
       </template>
 
-      <v-app-bar-title>Wallet</v-app-bar-title>
+      <v-app-bar-title>Order Book</v-app-bar-title>
 
       <template v-slot:append>
         <v-tabs v-model="activeTab">
@@ -44,7 +44,7 @@ const router = useRouter()
 const MENU_TABS = [
   {
     value: ROUTE_NAMES.settings,
-    label: 'Настройки'
+    label: 'Settings'
   },
   {
     value: ROUTE_NAMES.orderBook,
