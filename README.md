@@ -1,6 +1,6 @@
-## Run By Docker
+## Run in docker
 ```sh
-docker-compose-up
+docker-compose up
 ```
 
 ## Project Setup
